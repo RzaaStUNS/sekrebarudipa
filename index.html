@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absensi Piket</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div class="splash-screen" id="splashScreen">
+    <h1>Ubur Ubur Ikan Lele <br> Jangan Lupa Absen Lee!</h1>
+    <button class="next-button" onclick="hideSplash()">Next</button>
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainContent" class="hidden">
+    <video autoplay muted loop class="video-bg">
+      <source src="ai_repair_20250302190228949.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+      <h1>Absensi Piket</h1>
+      <form id="absensiForm" class="form-box">
+        <div class="form-group">
+          <label for="bidang">Bidang</label>
+          <select id="bidang" required>
+            <option value="Sekretaris dan Bendahara">Sekretaris dan Bendahara</option>
+            <option value="Kemahasiswaan">Kemahasiswaan</option>
+            <option value="Jaringan">Jaringan</option>
+            <option value="Penelitian dan Pengembangan">Penelitian dan Pengembangan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tanggal">Tanggal</label>
+          <input type="date" id="tanggal" required>
+        </div>
+        <div class="form-group">
+          <label for="keterangan">Keterangan</label>
+          <input type="text" id="keterangan" placeholder="Masukkan keterangan..." required>
+        </div>
+        <div class="form-group">
+          <label for="dokumentasi">Upload Dokumentasi</label>
+          <input type="file" id="dokumentasi" accept="image/*" required>
+        </div>
+        <button type="button" id="verifikasi">Preview</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
